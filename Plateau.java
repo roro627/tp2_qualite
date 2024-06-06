@@ -27,6 +27,10 @@ class Plateau{
 		this.ajouterPiece(new Tavalier('B',new Position(c+"2")));
 		this.ajouterPiece(new Tavalier('N',new Position(c+"7")));
 	    }
+		else if (c == 'D' || c == 'E'){
+			this.ajouterPiece(new Favalier('B',new Position(c+"2")));
+			this.ajouterPiece(new Favalier('N',new Position(c+"7")));
+		}
 		else{
 		this.ajouterPiece(new PionBlanc(new Position(c+"2")));
 	    this.ajouterPiece(new PionNoir(new Position(c+"7")));
