@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 abstract class Piece {
     private char couleur;
-    private Position position;
+    protected Position position;
     
 
     public Piece() throws ErreurCoordonneesException {

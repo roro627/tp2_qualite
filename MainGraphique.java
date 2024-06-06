@@ -140,22 +140,17 @@ class MainGraphique {
 			afficheDepPossible(f, possibilite);
 			f.rafraichir();
 
-			while(selectionne2 == null){
-				while(!souris.getClicGauche()){try{Thread.sleep(10);}catch(Exception e){}}
-				int indX = souris.getPosition().getX()/MainGraphique.tailleCase;
-				int indY = souris.getPosition().getY()/MainGraphique.tailleCase;
-				if( (indX >= 0) && (indX <= 7) && (indY >= 0) && (indY <=7) ){
+			while (selectionne2 == null) {
+				while (!souris.getClicGauche()) {
 					try {
-						selectionne2 = new Position(indX, indY);
-						p.deplacer(selectionne1.getPosition(),selectionne2);
-						if(couleurQuiJoue == 'B')
-							couleurQuiJoue = 'N';
-						else
-							couleurQuiJoue = 'B';
-					} catch (ErreurDeplacementException e) {
-						System.out.println("Invalid move, please try again.");
-						selectionne2 = null;
+						Thread.sleep(10);
+					} catch (Exception e) {
 					}
+				}
+				int indX = souris.getPosition().getX() / MainGraphique.tailleCase;
+				int indY = souris.getPosition().getY() / MainGraphique.tailleCase;
+				if ((indX >= 0) && (indX <= 7) && (indY >= 0) && (indY <= 7)) {
+					selectionne2 = new Position(indX, indY);
 				}
 			}
 
