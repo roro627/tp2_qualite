@@ -23,10 +23,15 @@ class Plateau{
 	// this.ajouterPiece(new Tour('C', new Position("H8")));
 
 	for(char c = 'A'; c < 'I' ; c++){
-	    this.ajouterPiece(new Tavalier('B',new Position(c+"2")));
-	    this.ajouterPiece(new Tavalier('N',new Position(c+"7")));
+	    if(c == 'C' || c == 'F'){
+		this.ajouterPiece(new Tavalier('B',new Position(c+"2")));
+		this.ajouterPiece(new Tavalier('N',new Position(c+"7")));
 	    }
-
+		else{
+		this.ajouterPiece(new PionBlanc(new Position(c+"2")));
+	    this.ajouterPiece(new PionNoir(new Position(c+"7")));
+	    }
+	}
 	this.ajouterPiece(new Tour('N', new Position("A8")));
 	this.ajouterPiece(new Cavalier('N', new Position("B8")));
 	this.ajouterPiece(new Fou('N', new Position("C8")));
