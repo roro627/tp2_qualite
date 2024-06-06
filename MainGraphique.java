@@ -98,7 +98,7 @@ class MainGraphique {
 
 	public static void main(String[] args) throws ErreurCoordonneesException, CouleurPieceException,
 			CaseOccupeeException, ErreurDeplacementException, RoiNonTrouveException {
-		Plateau p = new Plateau();
+		Plateau p = new Plateau(false);
 		Fenetre f = new Fenetre("Jeu d'échecs", 8 * MainGraphique.tailleCase, 10 * MainGraphique.tailleCase);
 		Souris souris = f.getSouris();
 		char couleurQuiJoue = 'B';
